@@ -1,3 +1,6 @@
+#ifndef STUDENT_HPP
+#define STUDENT_HPP
+
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -26,3 +29,6 @@ struct MemberNode {
 
     MemberNode(Student* student) : data(student), next(nullptr) {}
 };
+
+#endif // STUDENT_HPP
+
