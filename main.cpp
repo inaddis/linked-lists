@@ -4,15 +4,25 @@ int main() {
     Student* student2 = new Student("Bob", 2);
     Student* student3 = new Student("Charlie", 3);
 
-    // Printing the memory address of one of the object pointers without de-referencing
-    std::cout << "Memory address of student1: " << student1 << std::endl;
+    // Create an instance of the GroupRoster class
+    GroupRoster roster;
 
-    // Printing the details of other objects by de-referencing
-    std::cout << *student2 << std::endl;
-    std::cout << *student3 << std::endl;
+    // Add students to the roster
+    roster.addMember(student1);
+    roster.addMember(student2);
+    roster.addMember(student3);
 
-    // Cleaning up memory by deleting the object pointers
+    // Print the roster
+    std::cout << "Roster:\n" << roster.printRoster() << std::endl;
+
+    // Test edge cases
+    GroupRoster emptyRoster;
+    std::cout << "Empty roster:\n" << emptyRoster.printRoster() << std::endl;
+
+    // Cleanup memory
     delete student1;
     delete student2;
     delete student3;
+
+    return 0;
 }
