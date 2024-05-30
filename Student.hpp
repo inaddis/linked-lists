@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 
 // Student class representing a group member
 class Student {
@@ -16,4 +17,12 @@ public:
         os << "Student Name: " << student.name << ", ID: " << student.id;
         return os;
     }
+};
+
+// MemberNode struct to represent a node in the linked list
+struct MemberNode {
+    Student* data;
+    MemberNode* next;
+
+    MemberNode(Student* student) : data(student), next(nullptr) {}
 };
