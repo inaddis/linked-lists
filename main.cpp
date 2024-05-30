@@ -1,3 +1,7 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+
 int main() {
     // Creating object pointers for the Student class
     Student* student1 = new Student("Alice", 1);
