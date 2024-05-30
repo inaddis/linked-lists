@@ -1,3 +1,7 @@
+#ifndef GROUPROSTER_HPP
+#define GROUPROSTER_HPP
+
+#include "Student.hpp"
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -54,3 +58,6 @@ public:
         return count;
     }
 };
+
+#endif // GROUPROSTER_HPP
+
